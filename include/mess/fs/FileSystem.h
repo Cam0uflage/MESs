@@ -11,6 +11,50 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
+typedef struct {
+    int fd;
+    struct stat stat;
+    bool status;
+    
+} MessFile;
 
+
+ 
+/***
+ *  void messOpenFile()
+ *
+ *  Opens a file
+ *
+ *
+ *  Paramaters:
+ *    Path to the file to open
+ *
+ *
+ *  Returns:
+ *    A pointer contain file specifics.
+ *
+ **/
+MessFile* messOpenFile(const char* filename);
+ 
+ 
+/***
+ *  void messCloseFile()
+ *
+ *  Closes an open file, if the
+ *  file is not open nothing is
+ *  done, note: it also dealocates
+ * 
+ *
+ *
+ *  Paramaters:
+ *    MessFile pointer.
+ *
+ *
+ *  Returns:
+ *    nothing, check MessFile.status 
+ *    for status.
+ *
+ **/
+void messCloseFile(const MessFile*);
 
 #endif 
