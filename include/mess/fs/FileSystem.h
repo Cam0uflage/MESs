@@ -188,4 +188,22 @@ void messReadFile(const MessFile* messFile_p, void* destBuffer);
  *
  **/
 void messReadFileFromPath(const char* filename, void* destBuffer);
+
+/***
+ *  void messFileExists)
+ *
+ *  Checks if a file exists. 
+ *  
+ *  
+ *
+ *  Paramaters:
+ *    Path to file.
+ *    
+ *
+ *
+ *  Returns:
+ *    true if file exist, false if not.
+ *
+ **/
+bool messFileExists(const char* filename);
 #endif 
