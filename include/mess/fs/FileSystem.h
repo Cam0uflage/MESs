@@ -115,4 +115,22 @@ void messDeleteFileByPointer(const MessFile* messFile_p);
 void messRenameFile(const char* originalFilename,
                     const char* newFilename);
 
+ 
+/***
+ *  void messCreateFile()
+ *
+ *  Creates an empty file
+ *
+ *
+ *  Paramaters:
+ *    Path including the filename
+ *
+ *
+ *  Returns:
+ *    none
+ *
+ **/
+void messCreateFile(const char* filename);
+
+void messCopyFile(
 #endif 
