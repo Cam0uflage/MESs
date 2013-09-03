@@ -55,6 +55,64 @@ MessFile* messOpenFile(const char* filename);
  *    for status.
  *
  **/
-void messCloseFile(const MessFile*);
+void messCloseFile(const MessFile* messFile_p);
+
+ 
+/***
+ *  void messDeleteFile()
+ *
+ *  deletes a file given the path.
+ *
+ *
+ *  Paramaters:
+ *    Path to the file to delete as
+ *    a string.
+ *
+ *
+ *  Returns:
+ *    none
+ *
+ **/
+void messDeleteFile(const char* filename);
+
+ 
+/***
+ *  void messDeleteFileByPointer()
+ *
+ *  deletes a file given a MessFile
+ *  pointer that points to a open
+ *  file.
+ *
+ *
+ *  Paramaters:
+ *    A MessFile pointer, that is opened.
+ *
+ *
+ *  Returns:
+ *    nothing
+ *
+ **/
+void messDeleteFileByPointer(const MessFile* messFile_p);
+
+ 
+/***
+ *  void messRenameFile()
+ *
+ *  renames originalFilename to newFilename,
+ *  make sure the path is the same accept for the
+ *  filenames.
+ *
+ *
+ *  Paramaters:
+ *    2 strings, original path of the file
+ *    and new file path.
+ *
+ *
+ *  Returns:
+ *    nothing
+ *
+ **/
+void messRenameFile(const char* originalFilename,
+                    const char* newFilename);
 
 #endif 
