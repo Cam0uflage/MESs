@@ -80,7 +80,7 @@ void messDeleteFile(const char* filename);
  *  void messDeleteFileByPointer()
  *
  *  deletes a file given a MessFile
- *  pointer that points to a open
+ *  pointer that points to an open
  *  file.
  *
  *
@@ -132,5 +132,60 @@ void messRenameFile(const char* originalFilename,
  **/
 void messCreateFile(const char* filename);
 
-void messCopyFile(
+/***
+ *  void messCopyFile()
+ *
+ *  Copies srcFilename to destFilename
+ *  given the complete paths of files.
+ *
+ *
+ *  Paramaters:
+ *    Path to source and path
+ *    destination.
+ *
+ *
+ *  Returns:
+ *    none
+ *
+ **/
+ 
+void messCopyFile(const char* srcFilename, const char* destFilename);
+
+/***
+ *  void messReadFile()
+ *
+ *  Reads file contents into
+ *  destBuffer. destination buffer
+ *  is allocated for you.
+ *
+ *
+ *  Paramaters:
+ *    A MessFile pointer to an open file, 
+ *    destination buffer.
+ *    strings.
+ *
+ *
+ *  Returns:
+ *    none
+ *
+ **/
+void messReadFile(const MessFile* messFile_p, void* destBuffer);
+
+/***
+ *  void messReadFileFromPath()
+ *
+ *  Reads a file given the path
+ *  to it. destination buffer is
+ *  allocated for you.
+ *
+ *  Paramaters:
+ *    Path including the filename, destination buffer.
+ *    
+ *
+ *
+ *  Returns:
+ *    none
+ *
+ **/
+void messReadFileFromPath(const char* filename, void* destBuffer);
 #endif 
