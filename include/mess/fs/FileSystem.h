@@ -18,7 +18,11 @@ typedef struct {
     
 } MessFile;
 
-
+typedef enum {  
+                FILE_READ = 0x1,
+                FILE_WRITE,
+                FILE_APPEND,
+} OpenFileType;
  
 /***
  *  void messOpenFile()
