@@ -14,6 +14,7 @@
 typedef struct {
     int fd;
     struct stat stat;
+    OpenFileType
     bool status;
     
 } MessFile;
