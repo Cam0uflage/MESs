@@ -24,7 +24,7 @@ void messMessage(MessageType messageType,
     switch(messageType) {
 
         case MESSAGE_ERROR:
-            fprintf(stdout, "[ERROR] (%s %s): %s\n", source, cause, message);
+            fprintf(stderr, "[ERROR] (%s %s): %s\n", source, cause, message);
         break;
         
         case MESSAGE_WARNING:
@@ -32,7 +32,7 @@ void messMessage(MessageType messageType,
         break;
 
         default:
-             fprintf(stdout, "[ERROR] (uknown source - unknown cause): nothing to say\n");
+             fprintf(stderr, "[ERROR] (uknown source - unknown cause): nothing to say\n");
  
     }
 }
